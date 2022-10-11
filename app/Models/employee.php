@@ -14,7 +14,7 @@ class employee extends Model
     ];
 
     public static function createEmployee($request) {
-        $data = new employees();
+        $data = new employee();
         $data->name = $request->name ?? NULL;
         $data->gender = implode(', ', $request->gender);
         $data->languages = implode(', ', $request->languages);

@@ -36,7 +36,6 @@ class employeeController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->toarray());
         $recordId = employee::createEmployee($request);
         if($recordId){
             session()->flash('success',  trans('messages.employeeCreated'));
