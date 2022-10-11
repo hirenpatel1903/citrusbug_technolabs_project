@@ -4,6 +4,7 @@ namespace App\Http\Controllers\front;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\employee;
 
 class employeeController extends Controller
 {
@@ -36,6 +37,13 @@ class employeeController extends Controller
     public function store(Request $request)
     {
         dd($request->toarray());
+        $recordId = employee::createEmployee($request);
+        if($recordId){
+            session()->flash('success',  trans('messages.employeeCreated'));
+        }else{
+            session()->flash('error',  trans('messages.somethingWrong'));
+        }
+        return redirect()->route('addEmployee');
     }
 
     /**

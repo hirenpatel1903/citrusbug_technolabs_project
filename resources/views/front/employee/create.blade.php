@@ -7,6 +7,7 @@
         <div class="card">
             <h5 class="card-header text-center">Create Employee Form</h5>
             <div class="card-body">
+                @include('errormessage')
                 <form class="col-md-offset-3 col-md-12" action="{{ route('storeEmployee') }}" method="POST">
                     @csrf
                     <div class="form-group">
