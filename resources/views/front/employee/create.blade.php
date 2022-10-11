@@ -1,13 +1,13 @@
 @extends('layouts.app')
-@section('title','Add Users')
+@section('title','Add Employee')
 @section('css')
 @endsection
 @section('content')
     <div class="container mt-5">
         <div class="card">
-            <h5 class="card-header text-center">Create User Form</h5>
+            <h5 class="card-header text-center">Create Employee Form</h5>
             <div class="card-body">
-                <form class="col-md-offset-3 col-md-12" action="{{ route('storeUser') }}" method="POST">
+                <form class="col-md-offset-3 col-md-12" action="{{ route('storeEmployee') }}" method="POST">
                     @csrf
                     <div class="form-group">
                         <label for="name" class="control-label">Name</label>

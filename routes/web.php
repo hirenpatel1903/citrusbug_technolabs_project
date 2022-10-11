@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\front\userController;
+use App\Http\Controllers\front\employeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +30,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('user/add', [userController::class,'index'])->name('addUser');
-Route::post('user/store', [userController::class,'store'])->name('storeUser');
-Route::get('user/view', [userController::class,'view'])->name('viewUser');
+Route::get('employee/add', [employeeController::class,'index'])->name('addEmployee');
+Route::post('employee/store', [employeeController::class,'store'])->name('storeEmployee');
+Route::get('employee/view', [employeeController::class,'view'])->name('viewEmployee');

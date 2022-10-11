@@ -5,7 +5,7 @@ namespace App\Http\Controllers\front;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class userController extends Controller
+class employeeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class userController extends Controller
      */
     public function index()
     {
-        return view('front.users.create');
+        return view('front.employee.create');
     }
 
     /**
