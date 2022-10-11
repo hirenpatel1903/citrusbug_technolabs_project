@@ -32,4 +32,5 @@ Route::get('/', function () {
 
 Route::get('employee/add', [employeeController::class,'index'])->name('addEmployee');
 Route::post('employee/store', [employeeController::class,'store'])->name('storeEmployee');
-Route::get('employee/view', [employeeController::class,'view'])->name('viewEmployee');
+Route::get('employees', [employeeController::class,'view'])->name('viewEmployee');
+Route::get('employee/view/{id}', [employeeController::class,'show']);

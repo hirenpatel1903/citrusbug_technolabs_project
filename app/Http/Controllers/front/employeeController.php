@@ -23,9 +23,10 @@ class employeeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function view(Request $request)
     {
-        //
+        $employees = employee::get();
+        return view('front.employee.view',compact('employees'));
     }
 
     /**
@@ -53,7 +54,11 @@ class employeeController extends Controller
      */
     public function show($id)
     {
-        //
+        $employee = employee::where('id',$id)->first();
+        return view('front.employee.show', [
+            'employee' => $employee,
+            'languages' => explode(',', $employee->languages)
+        ]);
     }
 
     /**

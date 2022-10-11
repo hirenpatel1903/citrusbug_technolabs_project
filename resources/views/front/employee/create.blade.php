@@ -4,6 +4,7 @@
 @endsection
 @section('content')
     <div class="container mt-5">
+        <a href="{{ route('viewEmployee') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">View Employee</a>
         <div class="card">
             <h5 class="card-header text-center">Create Employee Form</h5>
             <div class="card-body">
